@@ -1,0 +1,160 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("../imagens/arena.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(8px);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.personagens {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.cartao-personagem {
+    display: none;
+    max-width: 360px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.cartao-personagem.aberto {
+    display: block;
+}
+
+.cartao-personagem img {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.cartao-personagem .cartao-topo {
+    padding: 30px 40px 0;
+}
+
+.cartao-personagem .nome {
+    margin-bottom: 5px;
+}
+
+.cartao-personagem .tipo {
+    background-color: #ffffff;
+    font-size: 12px;
+    opacity: 0.7;
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+
+.cartao-personagem .detalhes {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartao-personagem .cartao-informacoes {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px 50px;
+    margin-top: -120px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.cartao-personagem .cartao-informacoes h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #6b727a;
+}
+
+.cartao-personagem .cartao-informacoes .descricao {
+    padding: 0 10px;
+    font-size: 15px;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.cor-branco {
+    background-color: #f7f8fac9;
+}
+
+.cor-vermelho {
+    background-color: #f50707;
+}
+
+.cor-azul {
+    background-color: #777ff0;
+}
+
+.cor-verde {
+    background-color: #05f819;
+}
+
+.cor-pelebranca {
+    background-color: #f1ecb8;
+}
+
+.cor-amarelo {
+    background-color: #fcc719;
+}
+
+.cor-azulescuro {
+    background-color: #0716f3;
+}
+
+.cor-roxo {
+    background-color: #6f04a0;
+}
+
+.listagem {
+    max-width: 200px;
+}
+
+.listagem .personagem img {
+    width: 25%;
+}
+
+.listagem .personagem {
+    background-color: #6b727a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    transition: 0.15 ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.listagem .personagem:hover {
+    transform: scale(1.10);
+}
+
+.listagem .personagem span {
+    padding-right: 20px;
+}
+
+.listagem .personagem .ativo {
+    background-color: #fcc719;
+}
